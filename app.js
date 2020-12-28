@@ -19,12 +19,14 @@ if(err)
     console.log('error while connecting to database '+ error);
 }
 else{
-    console.log('connected to databad mongodb @ 27017');
+    console.log('connected to database mongodb @ 27017');
 }
 })
 
 //port binding
-const port = 3000;
+//const port = 3000;
+const port = process.env.PORT || 3000;
+
 
 //adding middleware
 app.use(cors());
