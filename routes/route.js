@@ -12,17 +12,18 @@ router.get('/contact',(req,res)=>{
 });
 
 //add contact
-router.post('/contact',(req,res)=>{
+ router.post('/contact', (req,res)=>{
     //logic for adding contact
     var newContact = new Contact();
-    
+        console.log(req.body.first_name)
         newContact.first_name=req.body.first_name;
         newContact.last_name=req.body.last_name;
         newContact.phone=req.body.phone;
     
-    newContact.save((err,Contact)=>{
+     newContact.save((err,Contact)=>{
         if(err){
-            res.json({msg: "failed to add contact"}); 
+            //res.json({msg: "failed to add contact"}); 
+            res.json(err);
         }
         else
         {

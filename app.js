@@ -1,7 +1,6 @@
 //importing modules
 var express = require("express");
 var cors = require("cors");
-var MongoClient = require('mongodb').MongoClient;
 var mongoose = require("mongoose");
 var bodyparser = require("body-parser");
 var path = require("path");
